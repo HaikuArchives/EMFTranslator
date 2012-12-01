@@ -5,9 +5,11 @@
 
 #include <Bitmap.h>
 #include <View.h>
+#include <Window.h>
 #include <Region.h>
 #include <Polygon.h>
 #include <Shape.h>
+#include <ByteOrder.h>
 #include <UTF8.h>
 #include <File.h>
 #include <Picture.h>
@@ -15,8 +17,10 @@
 #include <TranslatorAddOn.h>
 
 #include <cstdio>
+#include <iostream>
 #include <algorithm>
 #include <climits>
+#include <memory.h>
 
 #include "translator.h"
 #include "gdicontainer.h"
@@ -825,7 +829,7 @@ void EMFTranslator::SelectObject(EMRSELECTOBJECT *p)
 			break;
 		case LTGRAY_BRUSH:
 			DBGMSG(("\tstock object: LTGRAY_BRUSH\n"));
-			cout << '\t' << "" << '\n';
+			std::cout << '\t' << "" << '\n';
 			dc.lb.lbStyle = BS_SOLID;
 			dc.lb.lbColor = 0xc0c0c0;
 			dc.lb.lbHatch = 0;

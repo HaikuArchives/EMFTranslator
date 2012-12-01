@@ -4,7 +4,7 @@
  */
 
 #include <iostream>
-#include <memory>
+#include <memory.h>
 #include "gdicontainer.h"
 
 GDIPen::GDIPen(const LOGPEN *plp, const pattern *p) : GDIObject()
@@ -45,7 +45,7 @@ GDIColorSpace::GDIColorSpace()
 
 GDIContainer::GDIContainer(int n)
 {
-	objects = new (GDIObject *)[n];
+	objects = new GDIObject*[n];
 	memset(objects, 0, sizeof(GDIObject *) * n);
 	limit = n;
 }

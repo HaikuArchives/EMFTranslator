@@ -11,6 +11,7 @@
 #include <Message.h>
 
 #include <cstdio>
+#include <string.h>
 
 #include "translator.h"
 #include "dbgmsg.h"
